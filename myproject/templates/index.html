@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+</head>
+<body>
+   <h1>My Tasks</h1>
+
+    <form method="POST" action="/add">
+        <input type="text" name="s_name" placeholder="Enter task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+        {{range .}}
+            <li>{{.ID}} - {{.Note}}</li>
+        {{else}}
+            <li>No tasks yet</li>
+        {{end}}
+    </ul>
+
+</body>
+</html>
