@@ -3,14 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Simple Form</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    input:focus {
+      border-color: #007bff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
+
 <body>
 
-<form action="/write" method="POST">
-  <input name="name">
-  <input name="lname">
-  <button type="submit">Add</button>
-</form>
+<div class="container">
+  <h3>This tiny app does not use a database</h3>
+
+  <form action="/write" method="POST">
+
+    <label for="name">First Name</label>
+    <input type="text" name="name" id="name" placeholder="Enter your first name">
+
+    <label for="lname">Last Name</label>
+    <input type="text" name="lname" id="lname" placeholder="Enter your last name">
+
+    <button type="submit">Add</button>
+
+  </form>
+</div>
+
 </body>
 </html>
